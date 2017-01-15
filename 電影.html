@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  
+	  <script>
+	  
+			var list=[
+					{"p":"http://www.soundofhope.org/sites/default/files/p20_images/201609/a13769fa3de06da6a9939b8b51c6dbf5.jpg",
+					 "t":"德布西森林",
+					 "c":"Forest Debussy ",
+					 "l":"http://app2.atmovies.com.tw/film/fdch53409074/"},
+					{"p":"https://www.vscinemas.com.tw/upload/film/film_20161012026.jpg",
+					 "t":"奇異博士",
+					 "c":"DOCTOR STRANGE",
+					 "l":"https://www.vscinemas.com.tw/film/detail.aspx?id=1299"},
+					{"p":"https://www.vscinemas.com.tw/upload/film/film_20161012003.jpg",
+					 "t":"你的名字",
+					 "c":"YOUR NAME",
+					 "l":"https://www.vscinemas.com.tw/film/detail.aspx?id=1303"},
+					{"p":"https://thegirlsguidetoreading.files.wordpress.com/2016/10/fantastic-beasts-and-where-to-find-them-movie.jpg",
+					 "t":"怪獸與牠們的產地",
+					 "c":"Fantastic Beasts and Where to Find Them ",
+					 "l":"http://www.atmovies.com.tw/movie/ffuk83183660/"}
+					 ];
+
+			var str='';
+			
+			function f()
+			{
+				for(i=0;i<list.length;i++)
+				{
+					str+=
+					'<li class="collection-item avatar"><img src="'
+					+list[i].p+
+					'" alt="" class="circle"><span class="title">'
+					+list[i].t+
+					'</span><p>'
+					+list[i].c+
+					'</p><a href="'
+					+list[i].l+
+					'" target="blank" class="secondary-content"><i class="material-icons">grade</i></a></li>';
+				}
+				document.getElementById("movie").innerHTML=str;
+			}
+			
+	  </script>
+	  
+    </head>
+
+    <body onload="f()">
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  
+	  <ul class="collection" id="movie">
+	  
+	  </ul>
+  
+    </body>
+  </html>
